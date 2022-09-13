@@ -1,7 +1,18 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+:root {
+    /* fluid font sizes, margins, and padding */
+    --step-0: clamp(0.81rem, calc(0.74rem + 0.37vw), 1.00rem);
+    --step-1: clamp(0.98rem, calc(0.87rem + 0.54vw), 1.25rem);
+    --step-2: clamp(1.17rem, calc(1.02rem + 0.77vw), 1.56rem);
+    --step-3: clamp(1.40rem, calc(1.19rem + 1.07vw), 1.95rem);
+    --step-4: clamp(1.69rem, calc(1.39rem + 1.48vw), 2.44rem);
+    --step-5: clamp(2.02rem, calc(1.62rem + 2.01vw), 3.05rem);
+    --step-6: clamp(2.43rem, calc(1.88rem + 2.71vw), 3.82rem);
+    --step-7: clamp(2.91rem, calc(2.19rem + 3.62vw), 4.77rem);
+    --step-8: clamp(3.49rem, calc(2.53rem + 4.81vw), 5.96rem);
+    --step-9: clamp(4.19rem, calc(2.92rem + 6.36vw), 7.45rem);
+  
+    /* fallback font */
+    --system-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 @font-face {
@@ -16,72 +27,51 @@
     font-display: swap;
 }
 
-:root {
-    /* fluid font sizes */
-    --step--5: clamp(0.40rem, calc(0.39rem + 0.05vw), 0.43rem);
-    --step--4: clamp(0.48rem, calc(0.46rem + 0.11vw), 0.54rem);
-    --step--3: clamp(0.58rem, calc(0.54rem + 0.18vw), 0.67rem);
-    --step--2: clamp(0.69rem, calc(0.64rem + 0.28vw), 0.84rem);
-    --step--1: clamp(0.83rem, calc(0.75rem + 0.42vw), 1.05rem);
-    --step-0: clamp(1.00rem, calc(0.88rem + 0.61vw), 1.31rem);
-    --step-1: clamp(1.20rem, calc(1.03rem + 0.86vw), 1.64rem);
-    --step-2: clamp(1.44rem, calc(1.20rem + 1.19vw), 2.05rem);
-    --step-3: clamp(1.73rem, calc(1.40rem + 1.63vw), 2.56rem);
-    --step-4: clamp(2.07rem, calc(1.63rem + 2.21vw), 3.20rem);
-    --step-5: clamp(2.49rem, calc(1.90rem + 2.96vw), 4.01rem);
-    
-    /* fluid margins and padding */
-    --mp--5: clamp(0.13rem, calc(-0.03rem + 0.75vw), 0.51rem);
-    --mp--4: clamp(0.15rem, calc(-0.04rem + 0.95vw), 0.64rem);
-    --mp--3: clamp(0.18rem, calc(-0.06rem + 1.21vw), 0.80rem);
-    --mp--2: clamp(0.22rem, calc(-0.09rem + 1.53vw), 1.00rem);
-    --mp--1: clamp(0.26rem, calc(-0.13rem + 1.93vw), 1.25rem);
-    --mp-0: clamp(0.31rem, calc(-0.18rem + 2.44vw), 1.56rem);
-    --mp-1: clamp(0.38rem, calc(-0.24rem + 3.08vw), 1.95rem);
-    --mp-2: clamp(0.45rem, calc(-0.33rem + 3.89vw), 2.44rem);
-    --mp-3: clamp(0.54rem, calc(-0.44rem + 4.90vw), 3.05rem);
-    --mp-4: clamp(0.65rem, calc(-0.59rem + 6.18vw), 3.82rem);
-    --mp-5: clamp(0.78rem, calc(-0.78rem + 7.79vw), 4.77rem);
-  
-    /* fallback font */
-    --system-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--system-font);
+}
 
-body {font-family: ubuntu;}
+body {
+    font-family: ubuntu;
+}
 
 header {
     font-family: aquire;
-    font-size: var(--step-4);
+    font-size: var(--step-5);
     font-weight: bold;
 }
 
-form {
+form[id='search'] {
     display: flex;
-    width: 75vw;
-    border-radius: 3rem;
+    border-radius: 3em;
+    width: 250px;
+    font-size: var(--step-1);
 }
 
-input {
-    padding: var(--mp--5);
-    width: 60vw;
+form, input {
+    background-color: #ccfbf1;
     outline: none;
     border: none;
-}
+    width: 180px;
+    padding-left: 12px;
 
-form, input {background-color: #ccfbf1;}
-
-.search-icon {
-    opacity: 0.6;
-    height: 20px;
-    width: 30px;
 }
 
 .search-icon-wrapper {
     display: flex;
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     justify-content: end;
     align-items: center;
+}
+
+.search-icon {
+    opacity: 0.6;
+    height: 18px;
+    width: 18px;
 }
 
 .current-profile {
@@ -89,7 +79,7 @@ form, input {background-color: #ccfbf1;}
 }
 
 .jesse-martin-avatar {
-    border-radius: 6rem;
+    border-radius: 6em;
     height: 80px;
 }
 
@@ -108,7 +98,26 @@ form, input {background-color: #ccfbf1;}
     border: none;
     padding-block: 8px;
     width: 80px;
-    border-radius: 3rem;
+    border-radius: 3em;
     color: #f0fdfa;
     cursor: pointer;
+}
+
+main {
+    background-color: #f1f5f9;
+}
+
+.your-projects {
+    display: flex;
+    flex-direction: column;
+    gap: var(--step-2);
+    place-items: center;
+}
+
+.cards {
+    width: 280px;
+    height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px #e2e8f0;
 }
