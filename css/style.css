@@ -56,7 +56,6 @@ header {
 }
 
 form {
-    border: 2px solid mediumaquamarine;
     display: flex;
     width: 75vw;
     border-radius: 3rem;
@@ -68,6 +67,8 @@ input {
     outline: none;
     border: none;
 }
+
+form, input {background-color: #ccfbf1;}
 
 .search-icon {
     opacity: 0.6;
@@ -81,5 +82,23 @@ input {
     width: 40px;
     justify-content: end;
     align-items: center;
+}
 
+.current-profile {
+    display: flex;
+}
+
+.jesse-martin-avatar {
+    border-radius: 6rem;
+    height: 80px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info > span {
+    font-size: var(--step-3);
 }
