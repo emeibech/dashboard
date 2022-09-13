@@ -102,3 +102,13 @@ form, input {background-color: #ccfbf1;}
 .profile-info > span {
     font-size: var(--step-3);
 }
+
+.action > button {
+    background-color: #2dd4bf;
+    border: none;
+    padding-block: 8px;
+    width: 80px;
+    border-radius: 3rem;
+    color: #f0fdfa;
+    cursor: pointer;
+}
