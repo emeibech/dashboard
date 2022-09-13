@@ -31,24 +31,55 @@
     --step-5: clamp(2.49rem, calc(1.90rem + 2.96vw), 4.01rem);
     
     /* fluid margins and padding */
-    --step--5: clamp(0.50rem, calc(0.46rem + 0.22vw), 0.61rem);
-    --step--4: clamp(0.60rem, calc(0.54rem + 0.32vw), 0.77rem);
-    --step--3: clamp(0.72rem, calc(0.63rem + 0.46vw), 0.96rem);
-    --step--2: clamp(0.87rem, calc(0.74rem + 0.65vw), 1.20rem);
-    --step--1: clamp(1.04rem, calc(0.86rem + 0.89vw), 1.50rem);
-    --step-0: clamp(1.25rem, calc(1.01rem + 1.22vw), 1.88rem);
-    --step-1: clamp(1.50rem, calc(1.17rem + 1.65vw), 2.34rem);
-    --step-2: clamp(1.80rem, calc(1.36rem + 2.20vw), 2.93rem);
-    --step-3: clamp(2.16rem, calc(1.57rem + 2.93vw), 3.66rem);
-    --step-4: clamp(2.59rem, calc(1.82rem + 3.87vw), 4.58rem);
-    --step-5: clamp(3.11rem, calc(2.09rem + 5.10vw), 5.72rem);
+    --mp--5: clamp(0.13rem, calc(-0.03rem + 0.75vw), 0.51rem);
+    --mp--4: clamp(0.15rem, calc(-0.04rem + 0.95vw), 0.64rem);
+    --mp--3: clamp(0.18rem, calc(-0.06rem + 1.21vw), 0.80rem);
+    --mp--2: clamp(0.22rem, calc(-0.09rem + 1.53vw), 1.00rem);
+    --mp--1: clamp(0.26rem, calc(-0.13rem + 1.93vw), 1.25rem);
+    --mp-0: clamp(0.31rem, calc(-0.18rem + 2.44vw), 1.56rem);
+    --mp-1: clamp(0.38rem, calc(-0.24rem + 3.08vw), 1.95rem);
+    --mp-2: clamp(0.45rem, calc(-0.33rem + 3.89vw), 2.44rem);
+    --mp-3: clamp(0.54rem, calc(-0.44rem + 4.90vw), 3.05rem);
+    --mp-4: clamp(0.65rem, calc(-0.59rem + 6.18vw), 3.82rem);
+    --mp-5: clamp(0.78rem, calc(-0.78rem + 7.79vw), 4.77rem);
   
     /* fallback font */
     --system-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
+body {font-family: ubuntu;}
+
 header {
     font-family: aquire;
     font-size: var(--step-4);
     font-weight: bold;
+}
+
+form {
+    border: 2px solid mediumaquamarine;
+    display: flex;
+    width: 75vw;
+    border-radius: 3rem;
+}
+
+input {
+    padding: var(--mp--5);
+    width: 60vw;
+    outline: none;
+    border: none;
+}
+
+.search-icon {
+    opacity: 0.6;
+    height: 20px;
+    width: 30px;
+}
+
+.search-icon-wrapper {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: end;
+    align-items: center;
+
 }
