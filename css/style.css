@@ -80,7 +80,7 @@ form, input {
 
 .jesse-martin-avatar {
     border-radius: 6em;
-    height: 80px;
+    height: 60px;
 }
 
 .profile-info {
@@ -121,3 +121,22 @@ main {
     border-radius: 8px;
     box-shadow: 4px 4px 4px #e2e8f0;
 }
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.announcement-items {
+    background-color: white;
+    padding: 16px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px #e2e8f0;
+}
+
+.announcement-items > div > p {
+    font-size: var(--step-1);
+}
+
