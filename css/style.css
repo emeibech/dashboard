@@ -140,3 +140,34 @@ main {
     font-size: var(--step-1);
 }
 
+.trending {
+    display:flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.trending-items {
+    background-color: white;
+    padding: 16px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px #e2e8f0;
+}
+
+.trending-items > .item1,
+.trending-items > .item2,
+.trending-items > .item3,
+.trending-items > .item4 {
+    display: flex;
+}
+
+.trending-info{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.trending-items > div > img {
+    border-radius: 6em;
+    height: 60px;
+}
