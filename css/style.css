@@ -34,10 +34,22 @@
     font-family: var(--system-font);
 }
 
-body {
-    font-family: ubuntu;
+a {
+    text-decoration: none;
+    color: #14b8a6;
+    cursor: pointer;
 }
 
+a:hover {
+    color: #2dd4bf;
+}
+
+body {
+    font-family: ubuntu;
+    background-color: #f1f5f9;
+}
+
+/* header section */
 header {
     font-family: aquire;
     font-size: var(--step-5);
@@ -103,10 +115,7 @@ form, input {
     cursor: pointer;
 }
 
-main {
-    background-color: #f1f5f9;
-}
-
+/* main section */
 .your-projects {
     display: flex;
     flex-direction: column;
@@ -122,6 +131,7 @@ main {
     box-shadow: 4px 4px 4px #e2e8f0;
 }
 
+/* announcement section */
 .announcement {
     display: flex;
     flex-direction: column;
@@ -140,6 +150,7 @@ main {
     font-size: var(--step-1);
 }
 
+/* trending section */
 .trending {
     display:flex;
     flex-direction: column;
@@ -157,9 +168,7 @@ main {
 .trending-items > .item1,
 .trending-items > .item2,
 .trending-items > .item3,
-.trending-items > .item4 {
-    display: flex;
-}
+.trending-items > .item4 {display: flex;}
 
 .trending-info{
     display: flex;
@@ -169,5 +178,33 @@ main {
 
 .trending-items > div > img {
     border-radius: 6em;
-    height: 60px;
+    height: 50px;
+}
+
+/* navigation menu */
+nav {
+    background-color: #14b8a6;
+    padding-inline: 16px;
+    padding-block: 32px;
+    width: 280px;
+    border-radius: 16px;
+    box-shadow: 4px 4px 4px #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    display: none;
+}
+
+li {
+    list-style: none;
+    font-weight: bold;
+    font-size: var(--step-2);
+    color: white;
+}
+
+.nav1 > ul,
+.nav2 > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
