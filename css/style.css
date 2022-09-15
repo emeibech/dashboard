@@ -52,10 +52,12 @@ body {
 
 header {
     font-family: aquire;
-    font-size: var(--step-5);
+    font-size: var(--step-7);
     font-weight: bold;
     text-align: center;
-    padding-block: 16px;
+    padding-block: clamp(0.75rem, calc(0.43rem + 1.59vw), 1.56rem);
+    color: #14b8a6;
+    text-shadow: 1px 1px 8px;
 }
 
 /* header section */
@@ -63,9 +65,9 @@ header {
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding-top: 24px;
-    padding-bottom: 16px;
+    gap: var(--step-4);
+    padding-top: var(--step-7);
+    padding-bottom: var(--step-6);
     padding-inline: 24px;
     border-radius: 16px;
     box-shadow: 4px 4px 4px #e2e8f0;
@@ -96,24 +98,29 @@ header {
 .action {
     place-self: center;
     display: flex;
-    gap: 8px;
+    gap: clamp(0.45rem, calc(-3.19rem + 18.18vw), 9.77rem);
     flex-wrap: wrap;
 }
 
 .action > button {
     background-color: #2dd4bf;
     border: none;
-    padding-block: 8px;
-    width: 80px;
+    padding-block: clamp(0.63rem, calc(0.38rem + 1.22vw), 1.25rem);
+    width: clamp(4.84rem, calc(2.65rem + 10.91vw), 10.43rem);
     border-radius: 3em;
     color: #f0fdfa;
     cursor: pointer;
-    font-size: var(--step-0);
+    font-size: var(--step-1);
 }
 
 /* main section */
 /* projects section */
 .your-projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-wrapper {
     display: flex;
     flex-direction: column;
     gap: var(--step-1);
@@ -125,11 +132,12 @@ header {
 .trending > h3 {
     padding-top: 16px;
     padding-bottom: 4px;
+    place-self: center;
 }
 
 .cards {
     width: 99%;
-    height: 180px;
+    height: 240px;
     background-color: white;
     border-radius: 16px;
     box-shadow: 4px 4px 4px #e2e8f0;
@@ -144,10 +152,13 @@ header {
 
 .announcement-items {
     background-color: white;
-    padding: 16px;
     width: 99%;
     border-radius: 16px;
     box-shadow: 4px 4px 4px #e2e8f0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .announcement-items > div > p {
@@ -159,6 +170,7 @@ header {
     display:flex;
     flex-direction: column;
     place-items: center;
+    padding-bottom: 8px;
 }
 
 .trending-items {
@@ -246,7 +258,7 @@ li {
     display: flex;
     flex-direction: column;
     gap: clamp(1.40rem, calc(-2.00rem + 17.03vw), 10.13rem);
-    padding-left: var(--step-3);
+    padding-left: var(--step-0);
 }
 
 .nav1 > ul {
