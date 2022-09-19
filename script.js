@@ -4,6 +4,12 @@ const visibilities = document.querySelectorAll('.visibility');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 const body = document.querySelector('body');
+const list = document.querySelector('ul');
+const input = document.querySelector('input');
+const form = document.querySelector('form');
+const searchIcon = document.querySelector('.search-icon-wrapper');
+const search = document.querySelector('.search');
+const searchSVG = document.querySelector('.search-icon');
 
 //hover and touch effect for stars in interaction section
 stars.forEach(star => {
@@ -89,7 +95,7 @@ function openMenu() {
 }
 
 function closeMenu(e) {
-    if(!e.target.classList.contains('nav-show')) {
+    if(e.target != nav && e.target != list && e.target != input && e.target != form && e.target != searchIcon && e.target != search && e.target != searchSVG) {
         nav.classList.toggle('nav-show')
         body.removeEventListener('mouseup', closeMenu);
     }
