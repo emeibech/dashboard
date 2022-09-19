@@ -4,6 +4,14 @@ const visibilities = document.querySelectorAll('.visibility');
 
 //hover effect for stars in interaction section
 stars.forEach(star => {
+    star.addEventListener('touchstart', starHoverColor);
+});
+
+stars.forEach(star => {
+    star.addEventListener('touchend', starDefaultColor);
+});
+
+stars.forEach(star => {
     star.addEventListener('mouseover', starHoverColor);
 });
 
@@ -21,6 +29,14 @@ function starHoverColor(e) {
 
 //hover effect for shares in interaction section
 shares.forEach(share => {
+    share.addEventListener('touchstart', shareHoverColor);
+});
+
+shares.forEach(share => {
+    share.addEventListener('touchend', shareDefaultColor);
+});
+
+shares.forEach(share => {
     share.addEventListener('mouseover', shareHoverColor);
 });
 
@@ -37,6 +53,14 @@ function shareHoverColor(e) {
 }
 
 //hover effect for visibilities in interaction section
+visibilities.forEach(visibility => {
+    visibility.addEventListener('touchstart', visibilityHoverColor);
+});
+
+visibilities.forEach(visibility => {
+    visibility.addEventListener('touchend', visibilityDefaultColor);
+});
+
 visibilities.forEach(visibility => {
     visibility.addEventListener('mouseover', visibilityHoverColor);
 });
