@@ -294,3 +294,18 @@ li {
 .nav1 > ul {
     padding-top: clamp(1.69rem, calc(-2.60rem + 21.42vw), 12.67rem);
 }
+
+/* svg */
+.interaction-section {
+    display:flex;
+    gap: var(--step-1);
+    place-content: end;
+    cursor: pointer;
+}
+
+.star,
+.visibility,
+.share {
+    height: 30px;
+    color: #2dd4bf;
+}
