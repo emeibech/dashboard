@@ -31,7 +31,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: var(--system-font);
 }
 
 a {
@@ -74,6 +73,11 @@ header > h1 > a {
     color: #14b8a6;
     text-shadow: 1px 1px 8px;
     cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    padding-block: 0.5rem;
 }
 
 /* profile section */
@@ -240,7 +244,7 @@ main,
 
 /* navigation menu */
 /* search */
-form[id='search'] {
+#search {
     display: flex;
     border-radius: 3em;
     width: 70vw;
@@ -269,6 +273,15 @@ form, input {
     opacity: 0.6;
     height: var(--step-2);
     width: var(--step-2);
+}
+
+.search-icon-highlighted {
+    fill: #2dd4bf;
+    stroke: #2dd4bf;
+}
+
+.form-highlighted {
+    border: 1px solid #38bdf8;
 }
 
 .nav-show,

@@ -5,88 +5,61 @@ const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 const body = document.querySelector('body');
 const list = document.querySelector('ul');
-const input = document.querySelector('input');
-const form = document.querySelector('form');
+const input = document.querySelector('#search-input');
+const searchForm = document.querySelector('#search');
 const searchIcon = document.querySelector('.search-icon-wrapper');
 const search = document.querySelector('.search');
 const searchSVG = document.querySelector('.search-icon');
 
-//hover and touch effect for stars in interaction section
+//change color of star icon when interacted with
 stars.forEach(star => {
-    star.addEventListener('touchstart', starHoverColor);
-});
-
-stars.forEach(star => {
+    star.addEventListener('touchstart', starChangeColor);
     star.addEventListener('touchend', starDefaultColor);
-});
-
-stars.forEach(star => {
-    star.addEventListener('mouseover', starHoverColor);
-});
-
-stars.forEach(star => {
-    star.addEventListener('mouseout', starDefaultColor);
+    star.addEventListener('mousedown', starChangeColor);
+    star.addEventListener('mouseup', starDefaultColor);
 });
 
 function starDefaultColor(e) {
     e.target.src="./svg/star.svg";
 }
 
-function starHoverColor(e) {
+function starChangeColor(e) {
     e.target.src="./svg/star-hover.svg";
 }
 
-//hover and touch effect for shares in interaction section
-shares.forEach(share => {
-    share.addEventListener('touchstart', shareHoverColor);
-});
-
-shares.forEach(share => {
-    share.addEventListener('touchend', shareDefaultColor);
-});
-
-shares.forEach(share => {
-    share.addEventListener('mouseover', shareHoverColor);
-});
-
-shares.forEach(share => {
-    share.addEventListener('mouseout', shareDefaultColor);
-});
-
-function shareDefaultColor(e) {
-    e.target.src="./svg/share.svg";
-}
-
-function shareHoverColor(e) {
-    e.target.src="./svg/share-hover.svg";
-}
-
-//hover and touch effect for visibilities in interaction section
+//change color of visibility icon when interacted with
 visibilities.forEach(visibility => {
-    visibility.addEventListener('touchstart', visibilityHoverColor);
-});
-
-visibilities.forEach(visibility => {
+    visibility.addEventListener('touchstart', visibilityChangeColor);
     visibility.addEventListener('touchend', visibilityDefaultColor);
-});
-
-visibilities.forEach(visibility => {
-    visibility.addEventListener('mouseover', visibilityHoverColor);
-});
-
-visibilities.forEach(visibility => {
-    visibility.addEventListener('mouseout', visibilityDefaultColor);
+    visibility.addEventListener('mousedown', visibilityChangeColor);
+    visibility.addEventListener('mouseup', visibilityDefaultColor);
 });
 
 function visibilityDefaultColor(e) {
     e.target.src="./svg/visibility.svg";
 }
 
-function visibilityHoverColor(e) {
+function visibilityChangeColor(e) {
     e.target.src="./svg/visibility-hover.svg";
 }
 
-//hamburger menu
+//change color of share icon when interacted with
+shares.forEach(share => {
+    share.addEventListener('touchstart', shareChangeColor);
+    share.addEventListener('touchend', shareDefaultColor);
+    share.addEventListener('mousedown', shareChangeColor);
+    share.addEventListener('mouseup', shareDefaultColor);
+});
+
+function shareDefaultColor(e) {
+    e.target.src="./svg/share.svg";
+}
+
+function shareChangeColor(e) {
+    e.target.src="./svg/share-hover.svg";
+}
+
+//open and close hamburger menu
 hamburger.addEventListener('click', openMenu);
 
 function openMenu() {
@@ -95,8 +68,22 @@ function openMenu() {
 }
 
 function closeMenu(e) {
-    if(e.target != nav && e.target != list && e.target != input && e.target != form && e.target != searchIcon && e.target != search && e.target != searchSVG) {
+    if(e.target != nav && e.target != list && e.target != input && e.target != searchForm && e.target != searchIcon && e.target != search && e.target != searchSVG) {
         nav.classList.toggle('nav-show')
         body.removeEventListener('mouseup', closeMenu);
     }
+}
+
+//highlight search bar when typing
+input.addEventListener('focus', highlight);
+input.addEventListener('blur', removeHighlight);
+
+function highlight() {
+    searchSVG.classList.toggle('search-icon-highlighted');
+    searchForm.classList.toggle('form-highlighted');
+}
+
+function removeHighlight() {
+    searchSVG.classList.toggle('search-icon-highlighted');
+    searchForm.classList.toggle('form-highlighted');
 }
