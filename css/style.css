@@ -52,7 +52,7 @@ p {line-height: 1.3rem;}
 
 /* header section */
 .header-section {
-    background-color: white;
+    background: linear-gradient(210deg, #f0fdfa, #ccfbf1);
     display: flex;
     flex-direction: column;
     gap: var(--step-3);
@@ -118,6 +118,11 @@ h1 {
     color: #f0fdfa;
     cursor: pointer;
     font-size: var(--step-1);
+}
+
+.action > button:active {
+    background-color: #4cd6c4;
+    translate: 1px;
 }
 
 /* main section */
@@ -226,10 +231,17 @@ main,
     cursor: pointer;
 }
 
-.trending-items > .item1,
-.trending-items > .item2,
-.trending-items > .item3,
-.trending-items > .item4 {display: flex;}
+.item1,
+.item2,
+.item3,
+.item4 {display: flex;}
+
+.item1:active,
+.item2:active,
+.item3:active,
+.item4:active {
+    translate: 1px;
+}
 
 .trending-info{
     display: flex;
@@ -315,6 +327,10 @@ li {
     color: white;
 }
 
+li:hover {
+    color: #093633;
+}
+
 .nav1 > ul,
 .nav2 > ul{
     display: flex;
@@ -364,6 +380,4 @@ li {
     #search {
         width: 60vw;
     }
-
-
 }
