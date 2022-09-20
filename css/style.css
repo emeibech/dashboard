@@ -27,7 +27,7 @@
     font-display: swap;
 }
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -345,4 +345,25 @@ li {
 .hamburger {
     height: 35px;
     cursor: pointer;
+}
+
+/* media queries */
+@media only screen and (min-width: 450px) {
+    .nav-show,
+    .nav-hidden {
+        gap: clamp(2.59rem, calc(2.32rem + 1.37vw), 3.30rem);
+        width: 70vw;
+    }
+
+    .nav1 > ul,
+    .nav2 > ul {
+        gap: clamp(2.16rem, calc(1.97rem + 0.93vw), 2.64rem);
+        padding-top: var(--step-6);
+    }
+
+    #search {
+        width: 60vw;
+    }
+
+
 }
