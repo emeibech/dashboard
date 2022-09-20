@@ -52,12 +52,13 @@ p {line-height: 1.3rem;}
 
 /* header section */
 .header-section {
-    background: linear-gradient(210deg, #f0fdfa, #ccfbf1);
+    background-color: azure;
     display: flex;
     flex-direction: column;
     gap: var(--step-3);
     padding-bottom: var(--step-3);
     padding-inline: var(--step-3);
+    box-shadow: 0px 2px 2px gainsboro;
 }
 
 header {
@@ -142,8 +143,8 @@ h1 {
 .your-projects > h2,
 .announcement > h2,
 .trending > h2 {
-    padding-top: 16px;
-    padding-bottom: 4px;
+    padding-top: 20px;
+    padding-bottom: 5px;
     place-self: center;
 }
 
@@ -154,7 +155,7 @@ main,
 }
 
 .card {
-    width: 99%;
+    width: 98%;
     height: 280px;
     background-color: white;
     border-radius: 16px;
@@ -231,15 +232,15 @@ main,
     cursor: pointer;
 }
 
-.item1,
-.item2,
-.item3,
-.item4 {display: flex;}
+.trending-items > .item1,
+.trending-items > .item2,
+.trending-items > .item3,
+.trending-items > .item4 {display: flex;}
 
-.item1:active,
-.item2:active,
-.item3:active,
-.item4:active {
+.trending-items > .item1:active,
+.trending-items > .item2:active,
+.trending-items > .item3:active,
+.trending-items > .item4:active {
     translate: 1px;
 }
 
@@ -379,5 +380,43 @@ li:hover {
 
     #search {
         width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1vw 1fr 1fr 1vw;
+        grid-template-areas: 
+        "header header header header"
+        "...... proj   proj   ......"
+        "...... ann    trend  ......";
+    }
+
+    .header-section {grid-area: header;}
+    .announcement {grid-area: ann;}
+    .trending {grid-area: trend;}
+    .your-projects {
+        grid-area: proj;
+        width: 98vw;
+    }
+    
+    .card-wrapper {
+        width: 98vw;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    
+    #search {width: 55vw;}
+    .card {width: calc(200px + 20vw);}
+    .header-section {padding-block: var(--step-0);}
+    input {width: 45vw;}
+    
+    .announcement-items {
+        height: 420px; width: calc(200px + 20vw);
+    }
+
+    .trending-items {
+        height: 420px; width: calc(200px + 20vw)
     }
 }
