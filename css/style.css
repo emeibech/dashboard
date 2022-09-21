@@ -557,10 +557,15 @@ li:hover {
         font-size: var(--step-0);
     }
 
+    .your-projects > h2,
+    .announcement > h2,
+    .trending > h2 {padding-inline: 2px;}
+
     .trending {
         grid-area: aside;
-        align-self: end;
+        margin-top: 500px;
         width: calc(280px + 1vw);
+        height: 420px;
     }
 
     .trending-items {
@@ -573,5 +578,61 @@ li:hover {
     .trending-items > div > img {
         border-radius: 6em;
         height: 40px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    #nav-menu {
+        gap: var(--step-4);
+        height: 100vh;
+    }
+
+    li {
+        font-size: var(--step-3);
+    }
+
+    .nav1 > ul,
+    .nav2 > ul {
+        gap: var(--step-2);
+    }
+
+    .nav1 > ul {padding-top: 4rem;}
+
+    header {
+        padding-top: var(--step-1);
+    }
+
+    header > h1 > a {font-size: var(--step-5);}
+
+    .action {
+        gap: 2rem;
+    }
+
+    .your-projects {
+        width: 55vw;
+        padding-inline: var(--step-6);
+    }
+
+    .card-wrapper {column-gap: var(--step-7);}
+
+    .card {
+        width: calc(400px + 1vw);
+        height: calc(200px + 1vh);
+    }
+
+    .announcement {
+        width: calc(400px + 1vw);
+        height: 400px;
+    }
+
+    .trending {
+        width: calc(400px + 1vw);
+        margin-top: 400px;
+        height: 360px;
+    }
+
+    .trending-items > div > img {
+        border-radius: 6em;
+        height: 50px;
     }
 }
